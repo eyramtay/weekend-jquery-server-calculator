@@ -24,6 +24,11 @@ function readyNow() {
         subtractNumbers();
     })
 
+    $('#multiplication').on('click', function(event) {
+        console.log('clicked multiplication');
+        event.preventDefault();
+        multiplyNumbers();
+    })
 
 }
 
@@ -95,4 +100,9 @@ function addNumbers() {
 function subtractNumbers() {
     let total = Number($('#in-number1').val()) - Number($('#in-number2').val());
     console.log(total);
+}
+
+function multiplyNumbers() {
+    let total1 = Number($('#in-number1').val()) * Number($('#in-number2').val());
+    console.log(total1);
 }
