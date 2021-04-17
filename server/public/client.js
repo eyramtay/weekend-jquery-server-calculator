@@ -30,6 +30,12 @@ function readyNow() {
         multiplyNumbers();
     })
 
+    $('#division').on('click', function(event) {
+        console.log('clicked division');
+        event.preventDefault();
+        divideNumbers();
+    })
+
 }
 
 function addItem() {
@@ -105,4 +111,9 @@ function subtractNumbers() {
 function multiplyNumbers() {
     let total1 = Number($('#in-number1').val()) * Number($('#in-number2').val());
     console.log(total1);
+}
+
+function divideNumbers() {
+    let total2 = Number($('#in-number1').val()) / Number($('#in-number2').val());
+    console.log(total2);
 }
