@@ -127,5 +127,5 @@ function divideNumbers() {
 function renderAnswer() {
     $('#answer').empty();
 
-    $('#answer').append(`<div>${divideNumbers()}</div>`)
+    $('#answer').append(`<div>Answer goes here</div>`)
 }
