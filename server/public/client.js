@@ -36,6 +36,12 @@ function readyNow() {
         divideNumbers();
     })
 
+    $('#equals').on('click', function(event) {
+        console.log('clicked equals');
+        event.preventDefault();
+        renderAnswer();
+    })
+
 }
 
 function addItem() {
@@ -116,4 +122,10 @@ function multiplyNumbers() {
 function divideNumbers() {
     let total2 = Number($('#in-number1').val()) / Number($('#in-number2').val());
     console.log(total2);
+}
+
+function renderAnswer() {
+    $('#answer').empty();
+
+    $('#answer').append(`<div>${divideNumbers()}</div>`)
 }
